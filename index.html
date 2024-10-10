@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биография Алексея Матросова</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .gallery img {
+            width: 32%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .biography {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s 0.5s forwards;
+        }
+        .biography h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .biography p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .play-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background-animation div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 150, 255, 0.6);
+            border-radius: 50%;
+            animation: floatAnimation 15s infinite ease-in-out;
+        }
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            50% {
+                transform: translateY(-500px) translateX(200px) scale(1.2);
+            }
+            100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <div style="left: 10%; animation-delay: 0s;"></div>
+        <div style="left: 30%; animation-delay: 2s;"></div>
+        <div style="left: 50%; animation-delay: 4s;"></div>
+        <div style="left: 70%; animation-delay: 6s;"></div>
+        <div style="left: 90%; animation-delay: 8s;"></div>
+    </div>
+
+    <div class="container">
+        <div class="gallery">
+            <img src="7VvrjibvdKk.jpg" alt="Фотография 1">
+            <img src="ebF2WOmhdGU.jpg" alt="Фотография 2">
+            <img src="fenTs9LByKk.jpg" alt="Фотография 3">
+        </div>
+        <div class="biography">
+            <h2>FELT_90S</h2>
+            <p>
+                Алексей Сергеевич Матросов родился в небольшом селе, где с самого детства выделялся своим твердым характером и умением оставаться верным своим принципам. В школе он всегда был лидером, умел вдохновлять и поддерживать друзей. (Например, пиздил детей шлюх топором) 
+                <br><br>
+                В 22 года Алексей столкнулся с непростым жизненным выбором — девушка, в которую он был влюблен, пыталась манипулировать им, заставляя отказаться от своих мечтаний и стремлений ради отношений. Но Алексей не сдался. Он сумел распознать попытки давления и твердо решил идти своим путем. Он понял, что настоящая любовь — это не манипуляции и жертвы, а поддержка и понимание.
+                <br><br>
+                После этого события Алексей посвятил себя саморазвитию и личностному росту. Он переехал в большой город, где начал строить карьеру в IT-индустрии (Ставил IOS на Android.) Алексей верил в силу знаний и в то, что упорство и честность всегда приведут к успеху. Он создал несколько успешных стартапов, но не забывал помогать другим. Алексей часто проводил благотворительные мероприятия (Пиздил у бабайры 100р и кормил братана чипсами) и обучал молодежь, вдохновляя их не поддаваться внешнему давлению и верить в себя.
+                <br><br>
+                Сегодня Алексей продолжает свой путь. Он чинит лифты, выступает с лекциями в его любимой игре CS2 и делится своим опытом, показывая пример того, как важно сохранять себя и не идти на поводу у манипуляций. Его история — это история смелости, верности себе и стремления к лучшему будущему.
+            </p>
+        </div>
+    </div>
+
+    <button class="play-button" onclick="playAudio()">НАЖМИ СЮДА СУКАААААААААА</button>
+
+    <audio id="background-music" loop>
+        <source src="космос.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудиофайлы.
+    </audio>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('background-music');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
